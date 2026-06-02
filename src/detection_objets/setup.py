@@ -1,3 +1,6 @@
+from glob import glob
+import os
+
 from setuptools import find_packages, setup
 
 package_name = 'detection_objets'
@@ -10,6 +13,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -26,6 +30,7 @@ setup(
         'console_scripts': [
            # NODE_NAME = PACKAGE.FILE:main
            'camera_node = detection_objets.node_camera:main', 
+           'detector=detection_objets.detection:main',
         ],
     },
 )

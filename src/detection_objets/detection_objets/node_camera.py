@@ -1,3 +1,5 @@
+from std_msgs.msg import String 
+
 import rclpy
 from rclpy.node import Node
 import cv2
@@ -7,6 +9,7 @@ from sensor_msgs.msg import CompressedImage
 class CameraNode(Node):
     def __init__(self):
         super().__init__('camera_node') #nom nommer camera_node
+        self.pub_couleur = self.create_publisher(String, 'couleur_detectee', 10)
         self.subscription = self.create_subscription(
             CompressedImage,
             'turtlecam/image_raw/compressed',
@@ -32,27 +35,28 @@ class CameraNode(Node):
         #maintenant on convertie bgr en hsv parceque plus precis et plus simple 
         image_hsv = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2HSV)
         #definir les plages de couleurs pour le rouge et le bleu seulement fin ce qu'on a besoin pour projet 
-        masque_rouge = cv2.inRange(image_hsv, (0, 100, 100), (10, 255, 255)) 
-        masque_bleu =cv2.inRange(image_hsv,(100,100,100), (130,255,255))
+        masque_rouge = cv2.bitwise_or(
+          cv2.inRange(image_hsv, (0,   100, 80), (10,  255, 255)),  # rouge côté 0
+          cv2.inRange(image_hsv, (170, 100, 100), (180, 255, 255))   
+         ) 
+        masque_bleu =cv2.inRange(image_hsv,(80,100,100), (130,255,255))
         #on doit maintenant afficher quel couleur est apparu dans l'image 
         pixels_rouges= cv2.countNonZero(masque_rouge)
         pixels_bleus = cv2.countNonZero(masque_bleu)
-        if pixels_rouges > 3000 and pixels_bleus > 3000:
-            detection= f'Rouge et bleu detecté: {pixels_rouges} pixels rouges et {pixels_bleus} pixels bleus'
-        elif pixels_bleus > 3000:
-            detection= f'Bleu detecté: {pixels_bleus} pixels'
+        if pixels_bleus > 3000:
+            couleur = 'bleu'
         elif pixels_rouges > 3000:
-            detection= f'Rouge detecté: {pixels_rouges} pixels'
-        else :
-            detection= 'Aucun bleu ni rouge detecter dans l image'
+            couleur = 'rouge'
+        else:
+            couleur = 'aucune'
         
-        if detection != self.derniere_detection:
-            self.get_logger().info(detection)
-            self.derniere_detection = detection
+        msg_couleur = String()
+        msg_couleur.data = couleur
+        self.pub_couleur.publish(msg_couleur)
 def main(args=None):
     rclpy.init(args=args) #cette commande la permet de demarrer ROS2
     camera_node = CameraNode() 
     rclpy.spin(camera_node) #pour maintenir le noeud et qu'il dead pas 
     rclpy.shutdown() #quand tu fait ctrl+c c'est grace a cette fonctionne que le noeud s'arrete 
 if __name__ == '__main__':
-    main()
+     main()

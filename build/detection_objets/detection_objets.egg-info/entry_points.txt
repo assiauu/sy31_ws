@@ -1,2 +1,3 @@
 [console_scripts]
 camera_node = detection_objets.node_camera:main
+detector = detection_objets.detection:main

@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/detection_objets/detection_objets.egg-info/PKG-INFO
+writing dependency_links to ../../build/detection_objets/detection_objets.egg-info/dependency_links.txt
+writing entry points to ../../build/detection_objets/detection_objets.egg-info/entry_points.txt
+writing requirements to ../../build/detection_objets/detection_objets.egg-info/requires.txt
+writing top-level names to ../../build/detection_objets/detection_objets.egg-info/top_level.txt
+reading manifest file '../../build/detection_objets/detection_objets.egg-info/SOURCES.txt'
+writing manifest file '../../build/detection_objets/detection_objets.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/detection_objets/detection_objets.egg-info to /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets-0.0.0-py3.12.egg-info
+running install_scripts
+Installing camera_node script to /home/assia/sy31_ws/install/detection_objets/lib/detection_objets
+Installing detector script to /home/assia/sy31_ws/install/detection_objets/lib/detection_objets
+writing list of installed files to '/home/assia/sy31_ws/build/detection_objets/install.log'

@@ -1,0 +1,23 @@
+[1.192s] Invoking command in '/home/assia/sy31_ws/src/detection_objets': PYTHONPATH=/home/assia/sy31_ws/build/detection_objets/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/detection_objets build --build-base /home/assia/sy31_ws/build/detection_objets/build install --record /home/assia/sy31_ws/build/detection_objets/install.log --single-version-externally-managed install_data
+[1.572s] running egg_info
+[1.599s] writing ../../build/detection_objets/detection_objets.egg-info/PKG-INFO
+[1.600s] writing dependency_links to ../../build/detection_objets/detection_objets.egg-info/dependency_links.txt
+[1.600s] writing entry points to ../../build/detection_objets/detection_objets.egg-info/entry_points.txt
+[1.601s] writing requirements to ../../build/detection_objets/detection_objets.egg-info/requires.txt
+[1.602s] writing top-level names to ../../build/detection_objets/detection_objets.egg-info/top_level.txt
+[1.669s] reading manifest file '../../build/detection_objets/detection_objets.egg-info/SOURCES.txt'
+[1.670s] writing manifest file '../../build/detection_objets/detection_objets.egg-info/SOURCES.txt'
+[1.671s] running build
+[1.671s] running build_py
+[1.671s] running install
+[1.679s] running install_lib
+[1.706s] running install_data
+[1.707s] copying launch/launch.py -> /home/assia/sy31_ws/install/detection_objets/share/detection_objets/launch
+[1.708s] running install_egg_info
+[1.739s] removing '/home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets-0.0.0-py3.12.egg-info' (and everything under it)
+[1.740s] Copying ../../build/detection_objets/detection_objets.egg-info to /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets-0.0.0-py3.12.egg-info
+[1.743s] running install_scripts
+[1.950s] Installing camera_node script to /home/assia/sy31_ws/install/detection_objets/lib/detection_objets
+[1.950s] Installing detector script to /home/assia/sy31_ws/install/detection_objets/lib/detection_objets
+[1.951s] writing list of installed files to '/home/assia/sy31_ws/build/detection_objets/install.log'
+[1.998s] Invoked command in '/home/assia/sy31_ws/src/detection_objets' returned '0': PYTHONPATH=/home/assia/sy31_ws/build/detection_objets/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/detection_objets build --build-base /home/assia/sy31_ws/build/detection_objets/build install --record /home/assia/sy31_ws/build/detection_objets/install.log --single-version-externally-managed install_data
