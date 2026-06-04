@@ -9,9 +9,11 @@ setup.py
 ../../build/detection_objets/detection_objets.egg-info/top_level.txt
 ../../build/detection_objets/detection_objets.egg-info/zip-safe
 detection_objets/__init__.py
+detection_objets/clusterer.py
 detection_objets/detection.py
 detection_objets/node_camera.py
 detection_objets/node_lidar.py
+detection_objets/utils.py
 launch/launch.py
 resource/detection_objets
 test/test_copyright.py

@@ -31,6 +31,9 @@ setup(
            # NODE_NAME = PACKAGE.FILE:main
            'camera_node = detection_objets.node_camera:main', 
            'detector=detection_objets.detection:main',
+           'clusterer=detection_objets.clusterer:main',
+           'intensity_filter=detection_objets.node_lidar:main',
+
         ],
     },
 )

@@ -29,4 +29,15 @@ def generate_launch_description():
             executable='detector',
             output='screen',
         ),
+        Node (
+          package='detection_objets',
+          executable='clusterer',
+          output='screen',  
+        ),
+        Node (
+          package='detection_objets',
+          executable='intensity_filter',
+          output='screen',  
+        ),
+
     ])

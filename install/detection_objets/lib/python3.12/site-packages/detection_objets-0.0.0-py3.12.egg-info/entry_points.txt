@@ -1,3 +1,5 @@
 [console_scripts]
 camera_node = detection_objets.node_camera:main
+clusterer = detection_objets.clusterer:main
 detector = detection_objets.detection:main
+intensity_filter = detection_objets.node_lidar:main

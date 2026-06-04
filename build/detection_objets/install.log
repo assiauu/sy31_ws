@@ -1,11 +1,15 @@
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/__init__.py
+/home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/clusterer.py
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/node_camera.py
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/detection.py
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/node_lidar.py
+/home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/utils.py
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/__pycache__/__init__.cpython-312.pyc
+/home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/__pycache__/clusterer.cpython-312.pyc
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/__pycache__/node_camera.cpython-312.pyc
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/__pycache__/detection.cpython-312.pyc
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/__pycache__/node_lidar.cpython-312.pyc
+/home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets/__pycache__/utils.cpython-312.pyc
 /home/assia/sy31_ws/install/detection_objets/share/ament_index/resource_index/packages/detection_objets
 /home/assia/sy31_ws/install/detection_objets/share/detection_objets/package.xml
 /home/assia/sy31_ws/install/detection_objets/share/detection_objets/launch/launch.py
@@ -17,4 +21,6 @@
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets-0.0.0-py3.12.egg-info/requires.txt
 /home/assia/sy31_ws/install/detection_objets/lib/python3.12/site-packages/detection_objets-0.0.0-py3.12.egg-info/dependency_links.txt
 /home/assia/sy31_ws/install/detection_objets/lib/detection_objets/camera_node
+/home/assia/sy31_ws/install/detection_objets/lib/detection_objets/clusterer
 /home/assia/sy31_ws/install/detection_objets/lib/detection_objets/detector
+/home/assia/sy31_ws/install/detection_objets/lib/detection_objets/intensity_filter
