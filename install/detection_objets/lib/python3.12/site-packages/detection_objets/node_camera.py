@@ -36,8 +36,8 @@ class CameraNode(Node):
         image_hsv = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2HSV)
         #definir les plages de couleurs pour le rouge et le bleu seulement fin ce qu'on a besoin pour projet 
         masque_rouge = cv2.bitwise_or(
-          cv2.inRange(image_hsv, (0,   100, 80), (10,  255, 255)),  # rouge côté 0
-          cv2.inRange(image_hsv, (170, 100, 100), (180, 255, 255))   
+          cv2.inRange(image_hsv, (0,   125, 80), (10,  255, 255)),  # rouge côté 0
+          cv2.inRange(image_hsv, (170, 125, 100), (180, 255, 255))   
          ) 
         masque_bleu =cv2.inRange(image_hsv,(80,100,100), (130,255,255))
         #on doit maintenant afficher quel couleur est apparu dans l'image 

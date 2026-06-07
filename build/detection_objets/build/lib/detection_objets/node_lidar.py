@@ -13,7 +13,7 @@ class IntensityFilter(Node):
 
         # TODO: Determine the threshold for your sensor
         # ...
-        declare_param(self, "intensity_threshold", 3000)
+        declare_param(self, "intensity_threshold", 4000)
 
         self.pub = self.create_publisher(PointCloud2, "points_filtered", 10)
         self.sub = self.create_subscription(PointCloud2, "points", self.callback, 10)

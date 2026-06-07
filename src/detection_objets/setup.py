@@ -33,6 +33,8 @@ setup(
            'detector=detection_objets.detection:main',
            'clusterer=detection_objets.clusterer:main',
            'intensity_filter=detection_objets.node_lidar:main',
+           'transformer=detection_objets.transformer:main',
+           'clusterer1=detection_objets.clusterer1:main',
 
         ],
     },

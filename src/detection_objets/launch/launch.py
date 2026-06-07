@@ -39,5 +39,25 @@ def generate_launch_description():
           executable='intensity_filter',
           output='screen',  
         ),
+        Node (
+          package='detection_objets',
+          executable='transformer',
+          output='screen',  
+        ),
+         Node (
+            package='detection_objets',
+            executable='clusterer1',
+            output='screen',
+        ),
+        Node (
+            package='detection_objets',
+            executable='affichage',
+            output='screen',
+        ),
+        Node (
+            package='detection_objets',
+            executable='vitre_node',
+            output='screen',
+            ),
 
     ])
