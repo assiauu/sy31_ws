@@ -15,8 +15,13 @@ sy31_ws/
 ├── src/
 │   └── detection_objets/
 │       └── detection_objets/
-│           └── node_camera.py   # noeud détection couleur
-├── bags/                        # fichiers bag pour les tests
+│           └── node_camera.py # noeud détection couleur
+│           └── transformer.py 
+│           └── clusterer.py 
+│           └── clusterer1.py 
+│           └── node_lidar.py 
+│           └── detection.py 
+├── bags/                       
 └── README.md
 
 ## Lancer le projet
@@ -25,18 +30,20 @@ sy31_ws/
 ```bash
 cd ~/sy31_ws
 colcon build
-echo "source ~/sy31_ws/install/setup.bash >> ~/bashrc"
-source ~/.bashrc
+source ~/sy31_ws/install/setup.bash 
 ```
 
 ### 2. Lancer le bag
 ```bash
-ros2 bag play ~/sy31_ws/bags/objets/ --loop 
+ros2 bag play ~/sy31_ws/bags/objets/ 
+ros2 bag play ~/sy31_ws/bags/objets/ --loop (pour qu'il tourne en boucle)
 ```
 
-### 3. Lancer le noeud caméra
+### 3. Lancer le launch
 ```bash
-ros2 run detection_objets camera_node
+ros2 launch detection_objets launch.py
 ```
-
-## Auteurs
+### 4.lancer rqt
+```bash
+lancez : rqt ou ros2 run rqt_image_view rqt_image_view
+```

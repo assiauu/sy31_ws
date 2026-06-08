@@ -29,7 +29,7 @@ class Transformer(Node):
         for i, theta in enumerate(np.arange(msg.angle_min, msg.angle_max, msg.angle_increment)):
             #if not (-np.pi/4 <= theta <= np.pi/4):
                #continue
-            # TODO: Remove points too close
+
             if msg.ranges[i]>0.45:
 
             # TODO: Use msg.ranges and theta to determine the Cartesian coordinates x and y

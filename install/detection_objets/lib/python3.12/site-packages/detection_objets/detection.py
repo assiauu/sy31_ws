@@ -111,7 +111,7 @@ class Detector(Node):
 
         circularity = 4 * np.pi * area / (perimeter ** 2)
 
-        if circularity > 0.8 and area > 3000:
+        if circularity > 0.78 :
             (x, y), radius = cv2.minEnclosingCircle(cnt)
             cv2.circle(img, (int(x), int(y)), int(radius), (0, 255, 0), 2)
             forme= "cercle"
@@ -130,15 +130,13 @@ class Detector(Node):
                     Taille = "PETIT"
 
             
-        '''cv2.putText(img, forme, (50, 50),
-                    cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
-        cv2.putText(img, self.couleur_detectee, (50, 100),
-                    cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
-        cv2.putText(img, Taille, (50, 150),
-                    cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)'''
+        #cv2.putText(img, forme, (50, 50),
+                    #cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
+        #cv2.putText(img, self.couleur_detectee, (50, 100),
+                    #cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
+        #cv2.putText(img, Taille, (50, 150),
+                    #cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
         
-        # Déterminer le type d'objet
-# Déterminer le type d'objet
         if forme == "cercle":
             type_objet = f"panneau rond {self.couleur_detectee}"
         elif self.couleur_detectee == "rouge":
